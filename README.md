@@ -5,6 +5,7 @@ Tugas praktikum dengan fitur:
 - function
 
 ### Output
+```
 -----------------------------------------------------------------
 Nama : Farid Noer Hakim
 
@@ -16,5 +17,5 @@ Cita - Cita : Full-Stack Developer
 
 Motivasi masuk ke Informatika: Karena sudah ada basic
 -----------------------------------------------------------------
-
+```
 Menggunakan data input dari punya saya sendiri
