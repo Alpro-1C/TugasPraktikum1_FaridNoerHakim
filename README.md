@@ -1,5 +1,5 @@
 # Tugas Praktikum 1 Farid Noer Hakim
-Tugas praktikum dengan fitur:
+### Tugas praktikum dengan fitur:
 - loop
 - input
 - function
