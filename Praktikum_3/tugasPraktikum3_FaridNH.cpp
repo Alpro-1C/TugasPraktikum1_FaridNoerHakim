@@ -13,7 +13,7 @@ int main()
     do
     {
         cout << "==================================================" << "\n";
-        
+
         cout << "List Program:" << "\n";
         cout << "1. Program Input Nilai" << "\n";
         cout << "2. Program Angka Terbesar" << "\n";
@@ -32,21 +32,28 @@ int main()
             /* Program Pertama
             Program untuk mengevaluasi nilai mata pelajaran. */
             case 1:
-                int nilai;
-                cout << "Masukan nilai anda: " ;
-                cin >> nilai;
+                {
+                    int nilai;
+                    cout << "Masukan nilai anda: " ;
+                    cin >> nilai;
 
-                if (nilai >= 90) {
-                    cout << "Selamat! Anda mendapat nilai A" << endl;
-                } else if (nilai >= 80) {
-                    cout << "Anda mendapat nilai B" << endl;
-                } else if (nilai >= 70) {
-                    cout << "Anda mendapat nilai C" << endl;
-                } else if (nilai >= 60) {
-                    cout << "Anda mendapat nilai D." << endl;
-                } else {
-                    cout << "Anda mendapat nilai E." << endl;
+                    if (nilai >= 90 && nilai <= 100) { // Kondisi 1
+                        cout << "Selamat! Anda mendapat nilai A" << endl;
+                    } else if (nilai >= 80 && nilai <= 89) { // Kondisi 2
+                        cout << "Anda mendapat nilai B" << endl;
+                    } else if (nilai >= 70 && nilai <= 79) { // Kondisi 3
+                        cout << "Anda mendapat nilai C" << endl;
+                    } else if (nilai >= 60 && nilai <= 69) { // Kondisi 4
+                        cout << "Anda mendapat nilai D" << endl;
+                    } else if (nilai >= 0 && nilai <= 59) { // Kondisi 5
+                        cout << "Anda mendapat nilai E" << endl;
+                    } else { // Kondisi 6
+                        cout << "Nilai tidak diketahui..." << endl;
+                    }
                 }
+                /* Line Code diatas akan mengecek jika nilai yang diinput itu apakah berada di range
+                0 - 100 atau tidak. Jika input berada dalam range maka code akan mengoutput sesuai dengan apa yg ada
+                di kondisi 1 - 5. Jika tidak berada dalam range maka akan mengoutput kondisi 6. */
                 ulang = true;
                 break;
     
@@ -69,9 +76,9 @@ int main()
                     int data[A]; // Sebuah array yang nantinya akan diisikan nilai-nilai dari variable A
                     for (int i = 0; i < A; i++) {
                         int nilai;
-                        cout << "Masukkan data ke-" << i + 1 << " : " ; // Untuk menentukan nilai-nilai variable A
+                        cout << "Masukkan data ke-" << i + 1 << " : " ;
                         cin >> nilai;
-                        data[i] = nilai;
+                        data[i] = nilai; // Untuk menentukan nilai-nilai variable A
                     } // Loop akan terus berjalan sampai jumlah yg diinput di Variable A terpenuhi
 
                     // Array untuk menyimpan nilai terbesar ke-N yang ada di data
@@ -120,43 +127,43 @@ int main()
                     /* Didalam switch-case bisa terdapat switch-case lagi. Namanya nested switch-case. */
                     switch (kalkulator)
                     {
-                    /* Program Kalkulator Luas Persegi
-                    Sebuah program yang mencari luas Persegi. */
-                    case 1:
-                        {
-                            int S;
-                            cout << "Menghitung Luas Persegi" << "\n\n";
+                        /* Program Kalkulator Luas Persegi
+                        Sebuah program yang mencari luas Persegi. */
+                        case 1:
+                            {
+                                int S;
+                                cout << "Menghitung Luas Persegi" << "\n\n";
 
-                            cout << "Masukkan Sisi dari Persegi: " ;
-                            cin >> S;
+                                cout << "Masukkan Sisi dari Persegi: " ;
+                                cin >> S;
 
-                            int luasPersegi = S * S;
-                            cout << "\n" << "Luas dari Persegi tersebut adalah " << luasPersegi << endl;
-                        }
-                        break;
+                                int luasPersegi = S * S;
+                                cout << "\n" << "Luas dari Persegi tersebut adalah " << luasPersegi << endl;
+                            }
+                            break;
 
-                    /* Program Kalkulator Kedua
-                    Sebuah program yang mencari luas Persegi Panjang. */
-                    case 2:
-                        {
-                            int P, L;
-                            cout << "Menghitung Luas Persegi Panjang" << "\n\n";
+                        /* Program Kalkulator Kedua
+                        Sebuah program yang mencari luas Persegi Panjang. */
+                        case 2:
+                            {
+                                int P, L;
+                                cout << "Menghitung Luas Persegi Panjang" << "\n\n";
 
-                            cout << "Masukan Panjang = " ;
-                            cin >> P;
+                                cout << "Masukan Panjang = " ;
+                                cin >> P;
 
-                            cout << "Masukan Lebar = " ;
-                            cin >> L;
+                                cout << "Masukan Lebar = " ;
+                                cin >> L;
 
-                            int luasPersegiPanjang = P * L;
-                            cout << "\n" << "Luas dari Persegi Panjang tersebut adalah " << luasPersegiPanjang << endl;
-                        }
-                        break;
+                                int luasPersegiPanjang = P * L;
+                                cout << "\n" << "Luas dari Persegi Panjang tersebut adalah " << luasPersegiPanjang << endl;
+                            }
+                            break;
                     
-                    /* Program Kalkulator Ketiga
-                    Sebuah program yang mencari luas Segitiga. */
-                    case 3:
-                        {
+                        /* Program Kalkulator Ketiga
+                        Sebuah program yang mencari luas Segitiga. */
+                        case 3:
+                            {
                             int A, T;
                             cout << "Mencari Luas Segitiga" << "\n\n";
 
@@ -168,12 +175,12 @@ int main()
 
                             int luasSegitiga = 0.5 * A * T;
                             cout << "\n" << "Luas dari Segitiga tersebut adalah " << luasSegitiga << endl;
-                        }
-                        break;
+                            }
+                            break;
                     
-                    default:
-                        cout << "Angka yang anda pilih tidak ada di pilihan!" << endl;
-                        break;
+                        default:
+                            cout << "Angka yang anda pilih tidak ada di pilihan!" << endl;
+                            break;
                     }
                 }
                 ulang = true;
