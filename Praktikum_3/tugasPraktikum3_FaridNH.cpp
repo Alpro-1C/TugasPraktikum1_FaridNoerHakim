@@ -12,7 +12,6 @@ int main()
     bool ulang = true; // Variable yang berguna untuk menentukan program akan diulang atau keluar
     do
     {
-        
         cout << "==================================================" << "\n";
         
         cout << "List Program:" << "\n";
