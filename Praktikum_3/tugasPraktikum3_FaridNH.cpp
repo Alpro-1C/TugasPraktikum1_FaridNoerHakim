@@ -1,13 +1,6 @@
 #include <iostream>
 using namespace std;
 
-// Void function untuk memanggil loop dari "-"
-void deco() {
-    for (int i = 0; i < 50; i++) {
-        cout << "-" ;
-    }
-};
-
 /* BISMILLAH IPK DIATAS 3,5 AMINNNNNNNNN */
 
 int main()
@@ -19,11 +12,10 @@ int main()
     bool ulang = true; // Variable yang berguna untuk menentukan program akan diulang atau keluar
     do
     {
-        deco();
-        cout << "\n";
-        deco();
-
-        cout << "\n" << "List Program:" << "\n";
+        
+        cout << "==================================================" << "\n";
+        
+        cout << "List Program:" << "\n";
         cout << "1. Program Input Nilai" << "\n";
         cout << "2. Program Angka Terbesar" << "\n";
         cout << "3. Program Menghitung Luas Bangun Datar" << "\n";
