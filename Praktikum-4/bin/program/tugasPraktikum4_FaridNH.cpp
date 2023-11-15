@@ -1,9 +1,8 @@
-#include "../function/clearscreen/clearscreen.h"        // Memanggil fungsi yang ada di folder "../function/clearscreen/"
-#include "../function/clearscreen/clearscreen.cpp"
+#include "../../src/function/clearscreen/clearscreen.h"        // Memanggil fungsi yang ada di folder "../function/clearscreen/"
 /* Fungsinya untuk mengclear atau menghapus output-output di terminal agar
    terlihat lebih rapih dan tidak acak-acakan. */
 
-#include "../function/pauseconsole/pauseconsole.cpp"    // Memanggil fungsi yang ada di folder "../function/pauseconsole/"
+#include "../../src/function/pauseconsole/pauseconsole.cpp"    // Memanggil fungsi yang ada di folder "../function/pauseconsole/"
 /* Fungsinya untuk membuat console tidak langsung terclose atau dengan kata lain di pause.
    Biasanya kan kalo kita pilih opsi exit, itu lgsg keluar dan kita juga gk tau outputnya
    gimana, nah makanya kita pause dulu consolenya sebelum keluar. Disini fungsinya menggunakan
