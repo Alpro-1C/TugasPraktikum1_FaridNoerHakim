@@ -5,7 +5,9 @@
 #include <iostream>
 #include <limits>
 
-void pause( const char* enter = "Tekan Enter untuk melanjutkan..." ) 
+#include "pauseconsole.hpp"
+
+void PauseConsole() 
 {
     std::cin.clear() ; // Mengclear setiap error/failed states jika ada
     std::streambuf* buf = std::cin.rdbuf() ;
@@ -14,6 +16,7 @@ void pause( const char* enter = "Tekan Enter untuk melanjutkan..." )
     if( buf->in_avail() || ( buf->sungetc() != eof && std::cin.get() != '\n' ) )
         std::cin.ignore( std::numeric_limits<std::streamsize>::max(), '\n' ) ;
 
+    const char* enter = "Tekan Enter untuk melanjutkan..." ;
     std::cout << enter ;
     std::cin.ignore( std::numeric_limits<std::streamsize>::max(), '\n' ) ;
 }

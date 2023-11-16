@@ -1,8 +1,10 @@
-#include "../../src/function/clearscreen/clearscreen.h"        // Memanggil fungsi yang ada di folder "../function/clearscreen/"
+#include <iostream>
+
+#include "../../src/function/clearscreen/clearscreen.hpp"        // Memanggil fungsi yang ada di folder "../function/clearscreen/"
 /* Fungsinya untuk mengclear atau menghapus output-output di terminal agar
    terlihat lebih rapih dan tidak acak-acakan. */
 
-#include "../../src/function/pauseconsole/pauseconsole.cpp"    // Memanggil fungsi yang ada di folder "../function/pauseconsole/"
+#include "../../src/function/pauseconsole/pauseconsole.hpp"    // Memanggil fungsi yang ada di folder "../function/pauseconsole/"
 /* Fungsinya untuk membuat console tidak langsung terclose atau dengan kata lain di pause.
    Biasanya kan kalo kita pilih opsi exit, itu lgsg keluar dan kita juga gk tau outputnya
    gimana, nah makanya kita pause dulu consolenya sebelum keluar. Disini fungsinya menggunakan
@@ -16,8 +18,6 @@
    #include "fungsimu.cpp". Tapi, kalo projeknya besar jelas kita perlu mengorganisirnya
    dan memisahkan fungsi-fungsi dari main file. Nah, caranya kita tinggal taruh fungsi
    di folder lain lalu tambahkan "../foldernya/fungsimu.cpp" di #include. */
-
-#include <iostream>
 
 // Void function untuk memanggil loop dari "="
 void deco() {
@@ -185,14 +185,14 @@ int main()
                             cout << "Keluar dari Program..." << endl ;
                         }
                         ulang2 = false;
-                        pause();
+                        PauseConsole();
                         ClearScreen();
                         break;
 
                     default:
                         cout << "Pilihan yang anda pilih tidak ada!" << endl;
                         ulang2 = true;
-                        pause();
+                        PauseConsole();
                         ClearScreen();
                         break;
                     }
@@ -257,14 +257,14 @@ int main()
         case 4:
             cout << "Keluar dari program..." << endl ;
             ulang = false;
-            pause();            // Function yang dipanggil dari folder "/function/pauseconsole/"
+            PauseConsole();            // Function yang dipanggil dari folder "/function/pauseconsole/"
             ClearScreen();      // Function yang dipanggil dari folder "/function/clearscreen/"
             break;
 
 
         default:
             cout << "Angka yang anda pilih tidak ada di pilihan!" << endl ;
-            pause();
+            PauseConsole();
             ClearScreen();
             break;
         }

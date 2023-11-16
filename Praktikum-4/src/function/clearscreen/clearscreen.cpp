@@ -8,7 +8,7 @@
    menggunakan system("cls"), tapi saya mau coba membiasakan diri
    untuk menggunakan function selain system(). */
 
-#include "clearscreen.h"
+#include "clearscreen.hpp"
 #include <windows.h>
 
 void ClearScreen()
