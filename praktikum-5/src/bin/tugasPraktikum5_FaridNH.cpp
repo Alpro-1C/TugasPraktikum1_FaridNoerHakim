@@ -14,6 +14,8 @@
    gimana, nah makanya kita pause dulu consolenya sebelum keluar. Disini fungsinya menggunakan
    prompt "Tekan enter untuk melanjutkan..." biar kaya aplikasi-aplikasi lain. */
 
+#include "../lib/function/loading/loading.hpp"
+
 #include "../lib/functionTugas/GanjilGenapPrima/GanjilGenapPrima.hpp"
 
 #include "../lib/functionTugas/PolaBintang/polabintang.hpp"
@@ -50,6 +52,9 @@ void deco2() {
 int main()
 {
     using namespace std;
+
+    Loading();
+
     int program; // Variable yang digunakan untuk memanggil switch-case
     
     /* Saya buat opsi pilihan menggunakan loop do-while agar bisa seperti program sungguhan
